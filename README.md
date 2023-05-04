@@ -85,3 +85,6 @@ The code below shows the sample code which initially loads major edits to GLTF f
 
 ### **Tech Stack**
 The project is powered by AFrame and Three.js. 
+
+### **Demo**
+See demo of the component here: [Demo](https://shaderfrog-component.glitch.me/)
