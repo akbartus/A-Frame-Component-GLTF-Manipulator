@@ -19,32 +19,9 @@ In order to use the component one attach "gltf-manipulator" to an entity. The co
 * nodeTextureURL: { type: 'array', default: [] } - the URL(s) of individual node(s) in a GLTF/GLB file. Accepts array of strings.
 * nodeColor: { type: 'array', default: [] } - color(s) of individual node(s). Accepts array of HEX values.
 
-If attributes are indicated inline, they will be loaded as soon as a-frame is loaded. To make more precise changes it is possible to combine it with the following:
+If attributes are indicated inline, they will be loaded as soon as a-frame is loaded. To make more precise changes it is possible to combine it with the following function:
 ```
-        // Update individual nodes
-        document.querySelector('a-scene').addEventListener('loaded', function () {
-            document.querySelector('#myButton').addEventListener('click', () => {
-                updateNodeFunction(
-                    'drum_paint',       // node name
-                    'model/drum.png',   // textureURL
-                    '0 -4 1',            // position
-                    '0 0 0',            // rotation
-                    '1 1 1',            // scale
-                    '#ffffff',          // color
-                    true                // visibility
-                );
-                updateNodeFunction(
-                    'raccoon_paint',       // node name
-                    'model/raccoon.png',   // textureURL
-                    '0 1 1',            // position
-                    '0 0 0',            // rotation
-                    '1 1 1',            // scale
-                    '#ffffff',          // color
-                    true                // visibility
-                );            
-            });
-        })
-
+updateNodeFunction(nodeName, textureURL, position, rotation, scale, color, visibility);
 ```
 The code below shows the sample code which initially loads major edits to GLTF file and then supports precise changes to the file on button click:
 ```
@@ -108,6 +85,3 @@ The code below shows the sample code which initially loads major edits to GLTF f
 
 ### **Tech Stack**
 The project is powered by AFrame and Three.js. 
-
-### **Limitations**
-It works on Android Chrome, and you should have the chrome://flags/#webxr-incubations set to 'enabled' if Chrome ver. is below 113. The latest chrome browsers have webxr incubations by default. iOS devices, unfortunately, are not supported for now. 
