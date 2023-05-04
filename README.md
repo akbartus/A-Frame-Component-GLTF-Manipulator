@@ -16,7 +16,7 @@ In order to use the component one attach "gltf-manipulator" to an entity. The co
 * <b>nodeScale: { type: 'array', default: [] }</b> - scale of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeVisibility: { type: 'array', default: [] }</b> - visibility of individual node(s) in a GLTF/GLB file. Accepts array of boolean values
 * <b>nodeMaterialName: { type: 'array', default: [] }</b> - the name(s) of individual node material(s) in a GLTF/GLB file. It is different from node name. Accepts array of strings. They could be seen in Blender before exporting GLTF file (or alternatively they can be console.logged).
-* <b>nodeTextureURL: { type: 'array', default: [] }</b> - the URL(s) of individual node(s) in a GLTF/GLB file. Accepts array of strings.
+* <b>nodeTextureURL: { type: 'array', default: [] }</b> - the URL(s) to individual node texture(s) to be added to a GLTF/GLB file. Accepts array of strings.
 * <b>nodeColor: { type: 'array', default: [] }</b> - color(s) of individual node(s). Accepts array of HEX values.
 
 If attributes are indicated inline, they will be loaded as soon as a-frame is loaded. To make more precise changes it is possible to combine it with the following function:
