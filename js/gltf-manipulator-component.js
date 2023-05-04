@@ -13,7 +13,7 @@ AFRAME.registerComponent('gltf-manipulator', {
     },
     init: function () {
         let el = this.el;
-        // Texture related variables
+        // Variables
         let my_nodeNumber = this.data.nodeNumber;
         let my_nodeMaterialName = this.data.nodeMaterialName;
         let my_nodeTextureURL = this.data.nodeTextureURL;
