@@ -1,5 +1,5 @@
 # A-Frame-Component-GLTF-Manipulator
-<img src="img/screenshot.gif" title="Video screen capture" alt="Video screen capture" height="400">
+<img src="img/screenshot.gif" title="Video screen capture" alt="Video screen capture" height="300">
 
 
 
