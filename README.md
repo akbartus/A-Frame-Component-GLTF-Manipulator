@@ -19,7 +19,34 @@ In order to use the component one attach "gltf-manipulator" to an entity. The co
 * nodeTextureURL: { type: 'array', default: [] } - the URL(s) of individual node(s) in a GLTF/GLB file. Accepts array of strings.
 * nodeColor: { type: 'array', default: [] } - color(s) of individual node(s). Accepts array of HEX values.
 
-Sample code for running the component is provided below:
+If attributes are indicated inline, they will be loaded as soon as a-frame is loaded. To make more precise changes it is possible to combine it with the following:
+```
+        // Update individual nodes
+        document.querySelector('a-scene').addEventListener('loaded', function () {
+            document.querySelector('#myButton').addEventListener('click', () => {
+                updateNodeFunction(
+                    'drum_paint',       // node name
+                    'model/drum.png',   // textureURL
+                    '0 -4 1',            // position
+                    '0 0 0',            // rotation
+                    '1 1 1',            // scale
+                    '#ffffff',          // color
+                    true                // visibility
+                );
+                updateNodeFunction(
+                    'raccoon_paint',       // node name
+                    'model/raccoon.png',   // textureURL
+                    '0 1 1',            // position
+                    '0 0 0',            // rotation
+                    '1 1 1',            // scale
+                    '#ffffff',          // color
+                    true                // visibility
+                );            
+            });
+        })
+
+```
+The code below shows the sample code which initially loads major edits to GLTF file and then supports precise changes to the file on button click:
 ```
 <html>
 <head>
@@ -28,7 +55,6 @@ Sample code for running the component is provided below:
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="js/gltf-manipulator-component.js"></script>
 </head>
-
 <body>
     <a-scene>
         <a-entity gltf-manipulator="
@@ -53,8 +79,6 @@ Sample code for running the component is provided below:
         // Update individual nodes
         document.querySelector('a-scene').addEventListener('loaded', function () {
             document.querySelector('#myButton').addEventListener('click', () => {
-                
-                // Update dynamically the node 
                 updateNodeFunction(
                     'drum_paint',       // node name
                     'model/drum.png',   // textureURL
@@ -72,8 +96,7 @@ Sample code for running the component is provided below:
                     '1 1 1',            // scale
                     '#ffffff',          // color
                     true                // visibility
-                );
-            
+                );            
             });
         })
 
@@ -82,7 +105,6 @@ Sample code for running the component is provided below:
 
 </html>
 ```
-After entering camera mode (inside AR), direct your camera at the location you created your map and tap once on the screen. This will trigger localization of the point cloud and you should see the point cloud and/or GLTF model you loaded. Please note the counter for successful localizations at the top of the screen.  
 
 ### **Tech Stack**
 The project is powered by AFrame and Three.js. 
