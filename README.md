@@ -4,26 +4,26 @@
 
 
 ### **Description / Rationale**
-This is a A-Frame component which allows to manipulate GLTF/GLB file. In particular it demonstrates the possibility editing position, rotation, scale, visibility, material color and texture of individual nodes.   
+This is an A-Frame component which allows to manipulate GLTF/GLB file. In particular it demonstrates the possibility of editing position, rotation, scale, visibility, material color and texture of individual nodes.   
 
 ### **Instructions**
 
-In order to use the component one attach "gltf-manipulator" to an entity. The component has the following attributes: 
-* <b>nodeNumber: { type: 'int', default: 1 }</b> - the number of nodes of a GLTF/GLB file to be edited. All other attributes are dependent on it, i.e. if 2 is indicated, then the rest of attributes should have by 2 values.   
-* <b>nodeName: { type: 'array', default: [] }</b> - the name of individual node(s) in a GLTF/GLB file. It is different from node material name. Accepts array of strings. They could be seen in Blender before exporting GLTF file (or alternatively they can be console.logged).    
+In order to use the component attach "gltf-manipulator" to A-frame entity. The component has the following attributes: 
+* <b>nodeNumber: { type: 'int', default: 1 }</b> - the number of nodes of a GLTF/GLB file to be edited. All other attributes are dependent on it (i.e. if 2 is indicated, then the attributes below should have by 2 values at least).   
+* <b>nodeName: { type: 'array', default: [] }</b> - the name of individual node(s) in a GLTF/GLB file. It is different from node material name. It accepts array of strings.    
 * <b>nodePosition: { type: 'array', default: [] }</b> - position of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeRotation: { type: 'array', default: [] }</b> - rotation of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeScale: { type: 'array', default: [] }</b> - scale of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeVisibility: { type: 'array', default: [] }</b> - visibility of individual node(s) in a GLTF/GLB file. Accepts array of boolean values
-* <b>nodeMaterialName: { type: 'array', default: [] }</b> - the name(s) of individual node material(s) in a GLTF/GLB file. It is different from node name. Accepts array of strings. They could be seen in Blender before exporting GLTF file (or alternatively they can be console.logged).
-* <b>nodeTextureURL: { type: 'array', default: [] }</b> - the URL(s) to individual node texture(s) to be added to a GLTF/GLB file. Accepts array of strings.
-* <b>nodeColor: { type: 'array', default: [] }</b> - color(s) of individual node(s). Accepts array of HEX values.
+* <b>nodeMaterialName: { type: 'array', default: [] }</b> - the name(s) of individual node material(s) in a GLTF/GLB file. It accepts array of strings.
+* <b>nodeTextureURL: { type: 'array', default: [] }</b> - the URL(s) to individual node texture(s) to be added to a GLTF/GLB file. It accepts array of strings.
+* <b>nodeColor: { type: 'array', default: [] }</b> - color(s) of individual node(s). It accepts array of HEX values.
 
-If attributes are indicated inline, they will be loaded as soon as a-frame is loaded. To make more precise changes it is possible to combine it with the following function:
+If attributes are indicated inline, they will be loaded as soon as a-frame is loaded. To make more precise changes it is possible to combine the component with the following function:
 ```
 updateNodeFunction(nodeName, textureURL, position, rotation, scale, color, visibility);
 ```
-The code below shows the sample implementation of the compoent. Initially major edits are done inline to GLTF file, then individual changes are done through button click event:
+The code below shows the sample implementation of the compoent. Initially major edits are done to a GLTF file, then individual changes are done through button click event:
 ```
 <html>
 <head>
@@ -84,7 +84,7 @@ The code below shows the sample implementation of the compoent. Initially major 
 ```
 
 ### **Tech Stack**
-The project is powered by AFrame and Three.js. 3D model of raccoon was created by Hiu Kim and was taken from <a href="https://github.com/hiukim/mind-ar-js/tree/master/examples/image-tracking/assets/band-example/raccoon">MindAr.js repository</a>. 
+The project is powered by AFrame and Three.js. 3D model of raccoon was created by Hiu Kim and taken from <a href="https://github.com/hiukim/mind-ar-js/tree/master/examples/image-tracking/assets/band-example/raccoon">MindAr.js repository</a>. 
 
 ### **Demo**
 See demo of the component here: [Demo](https://gltf-manipulator.glitch.me/)
