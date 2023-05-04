@@ -9,7 +9,7 @@ This is a A-Frame component which allows to manipulate GLTF/GLB file. In particu
 ### **Instructions**
 
 In order to use the component one attach "gltf-manipulator" to an entity. The component has the following attributes: 
-* nodeNumber: { type: 'int', default: 1 }</b> - the number of nodes of a GLTF/GLB file to be edited. All other attributes are dependent on it, i.e. if 2 is indicated, then the rest of attributes should have by 2 values.   
+* <b>nodeNumber: { type: 'int', default: 1 }</b> - the number of nodes of a GLTF/GLB file to be edited. All other attributes are dependent on it, i.e. if 2 is indicated, then the rest of attributes should have by 2 values.   
 * <b>nodeName: { type: 'array', default: [] }</b> - the name of individual node(s) in a GLTF/GLB file. It is different from node material name. Accepts array of strings.  
 * <b>nodePosition: { type: 'array', default: [] }</b> - position of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeRotation: { type: 'array', default: [] }</b> - rotation of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
