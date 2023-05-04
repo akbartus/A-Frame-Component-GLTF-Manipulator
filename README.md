@@ -84,7 +84,7 @@ The code below shows the sample implementation of the compoent. Initially major 
 ```
 
 ### **Tech Stack**
-The project is powered by AFrame and Three.js. 
+The project is powered by AFrame and Three.js. 3D model of raccoon was created by Hiu Kim and was taken from <a href="https://github.com/hiukim/mind-ar-js/tree/master/examples/image-tracking/assets/band-example/raccoon">MindAr.js repository</a>. 
 
 ### **Demo**
 See demo of the component here: [Demo](https://gltf-manipulator.glitch.me/)
