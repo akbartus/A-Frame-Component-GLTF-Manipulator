@@ -4,7 +4,7 @@
 
 
 ### **Description / Rationale**
-This is a A-Frame component which allows to manipulate GLTF/GLB file. In particular it support editing position, rotation, scale, visibility, material color and texture of individual nodes.  
+This is a A-Frame component which allows to manipulate GLTF/GLB file. In particular it demonstrates the possibility editing position, rotation, scale, visibility, material color and texture of individual nodes.   
 
 ### **Instructions**
 
