@@ -10,12 +10,12 @@ This is a A-Frame component which allows to manipulate GLTF/GLB file. In particu
 
 In order to use the component one attach "gltf-manipulator" to an entity. The component has the following attributes: 
 * <b>nodeNumber: { type: 'int', default: 1 }</b> - the number of nodes of a GLTF/GLB file to be edited. All other attributes are dependent on it, i.e. if 2 is indicated, then the rest of attributes should have by 2 values.   
-* <b>nodeName: { type: 'array', default: [] }</b> - the name of individual node(s) in a GLTF/GLB file. It is different from node material name. Accepts array of strings.  
+* <b>nodeName: { type: 'array', default: [] }</b> - the name of individual node(s) in a GLTF/GLB file. It is different from node material name. Accepts array of strings. They could be seen in Blender before exporting GLTF file (or alternatively they can be console.logged).    
 * <b>nodePosition: { type: 'array', default: [] }</b> - position of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeRotation: { type: 'array', default: [] }</b> - rotation of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeScale: { type: 'array', default: [] }</b> - scale of individual node(s) in a GLTF/GLB file. Accepts array of x y z values.
 * <b>nodeVisibility: { type: 'array', default: [] }</b> - visibility of individual node(s) in a GLTF/GLB file. Accepts array of boolean values
-* <b>nodeMaterialName: { type: 'array', default: [] }</b> - the name(s) of individual node material(s) in a GLTF/GLB file. It is different from node name. Accepts array of strings.
+* <b>nodeMaterialName: { type: 'array', default: [] }</b> - the name(s) of individual node material(s) in a GLTF/GLB file. It is different from node name. Accepts array of strings. They could be seen in Blender before exporting GLTF file (or alternatively they can be console.logged).
 * <b>nodeTextureURL: { type: 'array', default: [] }</b> - the URL(s) of individual node(s) in a GLTF/GLB file. Accepts array of strings.
 * <b>nodeColor: { type: 'array', default: [] }</b> - color(s) of individual node(s). Accepts array of HEX values.
 
