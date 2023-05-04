@@ -23,7 +23,7 @@ If attributes are indicated inline, they will be loaded as soon as a-frame is lo
 ```
 updateNodeFunction(nodeName, textureURL, position, rotation, scale, color, visibility);
 ```
-The code below shows the sample code which initially loads major edits to GLTF file and then supports precise changes to the file on button click:
+The code below shows the sample implementation of the compoent. Initially major edits are done inline to GLTF file, then individual changes are done through button click event:
 ```
 <html>
 <head>
